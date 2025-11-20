@@ -1,0 +1,28 @@
+# Site settings
+title: Takagi Works
+description: Building simple and deliberate developer tooling.
+url: ""
+baseurl: ""
+author: Takagi Works
+permalink: /blog/:year/:month/:day/:title/
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins: []
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: Takagi
+    url: /takagi.html
+  - title: Hako
+    url: /hako.html
+  - title: Blog
+    url: /blog/
