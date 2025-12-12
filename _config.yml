@@ -22,8 +22,11 @@ defaults:
     values:
       jekyll: false
 
-exclude:
-  - docs/takagi
+include:
+  - docs
+  - docs/takagi-core
+  - docs/takagi-core/_static
+  - docs/takagi-core/_yardoc
 
 # Navigation
 nav:
