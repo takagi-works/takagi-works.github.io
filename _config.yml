@@ -16,6 +16,15 @@ collections:
     output: true
     permalink: /blog/:year/:month/:day/:title/
 
+defaults:
+  - scope:
+      path: "docs/takagi"
+    values:
+      jekyll: false
+
+exclude:
+  - docs/takagi
+
 # Navigation
 nav:
   - title: Home

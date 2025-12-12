@@ -1,0 +1,1583 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Takagi::Message::Inbound
+  
+    &mdash; Documentation by YARD 0.9.38
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Takagi::Message::Inbound";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Takagi.html" title="Takagi (module)">Takagi</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Message.html" title="Takagi::Message (module)">Message</a></span></span>
+     &raquo; 
+    <span class="title">Inbound</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Takagi::Message::Inbound
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName"><span class='object_link'><a href="Base.html" title="Takagi::Message::Base (class)">Base</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="Base.html" title="Takagi::Message::Base (class)">Base</a></span></li>
+          
+            <li class="next">Takagi::Message::Inbound</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/takagi/message/inbound.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Class for inbound message that is coming to server</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#method-instance_method" title="#method (instance method)">#<strong>method</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute method.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#response_code-instance_method" title="#response_code (instance method)">#<strong>response_code</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute response_code.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#uri-instance_method" title="#uri (instance method)">#<strong>uri</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute uri.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="Base.html" title="Takagi::Message::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#code-instance_method" title="Takagi::Message::Base#code (method)">#code</a></span>, <span class='object_link'><a href="Base.html#message_id-instance_method" title="Takagi::Message::Base#message_id (method)">#message_id</a></span>, <span class='object_link'><a href="Base.html#options-instance_method" title="Takagi::Message::Base#options (method)">#options</a></span>, <span class='object_link'><a href="Base.html#payload-instance_method" title="Takagi::Message::Base#payload (method)">#payload</a></span>, <span class='object_link'><a href="Base.html#token-instance_method" title="Takagi::Message::Base#token (method)">#token</a></span>, <span class='object_link'><a href="Base.html#type-instance_method" title="Takagi::Message::Base#type (method)">#type</a></span>, <span class='object_link'><a href="Base.html#version-instance_method" title="Takagi::Message::Base#version (method)">#version</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#accept-instance_method" title="#accept (instance method)">#<strong>accept</strong>  &#x21d2; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get Accept option.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#accept%3F-instance_method" title="#accept? (instance method)">#<strong>accept?</strong>(format)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if request accepts a specific content format.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#content_format-instance_method" title="#content_format (instance method)">#<strong>content_format</strong>  &#x21d2; Integer<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get Content-Format option.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#delete%3F-instance_method" title="#delete? (instance method)">#<strong>delete?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if request is a DELETE.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get%3F-instance_method" title="#get? (instance method)">#<strong>get?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if request is a GET.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(data, transport: :udp)  &#x21d2; Inbound </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Inbound.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#observe%3F-instance_method" title="#observe? (instance method)">#<strong>observe?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if request is an OBSERVE.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#option-instance_method" title="#option (instance method)">#<strong>option</strong>(option_number)  &#x21d2; Object<sup>?</sup> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get CoAP option by number.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#option%3F-instance_method" title="#option? (instance method)">#<strong>option?</strong>(option_number)  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if request has a specific CoAP option.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_coap_uri-instance_method" title="#parse_coap_uri (instance method)">#<strong>parse_coap_uri</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#post%3F-instance_method" title="#post? (instance method)">#<strong>post?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if request is a POST.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#put%3F-instance_method" title="#put? (instance method)">#<strong>put?</strong>  &#x21d2; Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Check if request is a PUT.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#query_params-instance_method" title="#query_params (instance method)">#<strong>query_params</strong>  &#x21d2; Hash&lt;String, String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get query parameters as a hash.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_response-instance_method" title="#to_response (instance method)">#<strong>to_response</strong>(code, payload, options: {})  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="Base.html" title="Takagi::Message::Base (class)">Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Base.html#coap_code_to_method-instance_method" title="Takagi::Message::Base#coap_code_to_method (method)">#coap_code_to_method</a></span>, <span class='object_link'><a href="Base.html#coap_method_to_code-instance_method" title="Takagi::Message::Base#coap_method_to_code (method)">#coap_method_to_code</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(data, transport: :udp)  &#x21d2; <tt><span class='object_link'><a href="" title="Takagi::Message::Inbound (class)">Inbound</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of Inbound.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11
+12
+13
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>transport:</span> <span class='symbol'>:udp</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span> <span class='label'>transport:</span> <span class='id identifier rubyid_transport'>transport</span><span class='rparen'>)</span>
+  <span class='ivar'>@method</span> <span class='op'>=</span> <span class='id identifier rubyid_coap_code_to_method'>coap_code_to_method</span><span class='lparen'>(</span><span class='ivar'>@code</span><span class='rparen'>)</span>
+  <span class='ivar'>@response_code</span> <span class='op'>=</span> <span class='id identifier rubyid_coap_code_to_method'>coap_code_to_method</span><span class='lparen'>(</span><span class='ivar'>@code</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@code</span> <span class='op'>&gt;=</span> <span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/Response.html" title="Takagi::CoAP::Registries::Response (class)">Response</a></span></span><span class='op'>::</span><span class='const'>CREATED</span> <span class='comment'># Response
+</span>  <span class='ivar'>@uri</span> <span class='op'>=</span> <span class='id identifier rubyid_parse_coap_uri'>parse_coap_uri</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>CoAP Options: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Parsed CoAP URI: </span><span class='embexpr_beg'>#{</span><span class='ivar'>@uri</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="method-instance_method">
+  
+    #<strong>method</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_method'>method</span>
+  <span class='ivar'>@method</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="response_code-instance_method">
+  
+    #<strong>response_code</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute response_code.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_response_code'>response_code</span>
+  <span class='ivar'>@response_code</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="uri-instance_method">
+  
+    #<strong>uri</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute uri.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+7
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 7</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_uri'>uri</span>
+  <span class='ivar'>@uri</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="accept-instance_method">
+  
+    #<strong>accept</strong>  &#x21d2; <tt>Integer</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get Accept option</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The Accept content format</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_accept'>accept</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/Option.html" title="Takagi::CoAP::Registries::Option (class)">Option</a></span></span><span class='op'>::</span><span class='const'>ACCEPT</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="accept?-instance_method">
+  
+    #<strong>accept?</strong>(format)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if request accepts a specific content format</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>format</span>
+      
+      
+        <span class='type'>(<tt>String</tt>, <tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Format name or number</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_accept?'>accept?</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_accept'>accept</span>
+
+  <span class='id identifier rubyid_format_number'>format_number</span> <span class='op'>=</span> <span class='id identifier rubyid_format'>format</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Integer</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_format'>format</span> <span class='op'>:</span> <span class='id identifier rubyid_content_format_to_number'>content_format_to_number</span><span class='lparen'>(</span><span class='id identifier rubyid_format'>format</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_accept'>accept</span> <span class='op'>==</span> <span class='id identifier rubyid_format_number'>format_number</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="content_format-instance_method">
+  
+    #<strong>content_format</strong>  &#x21d2; <tt>Integer</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get Content-Format option</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Integer</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The Content-Format</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_content_format'>content_format</span>
+  <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/Option.html" title="Takagi::CoAP::Registries::Option (class)">Option</a></span></span><span class='op'>::</span><span class='const'>CONTENT_FORMAT</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="delete?-instance_method">
+  
+    #<strong>delete?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if request is a DELETE</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_delete?'>delete?</span>
+  <span class='id identifier rubyid_method'>method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DELETE</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="get?-instance_method">
+  
+    #<strong>get?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if request is a GET</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 105</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_get?'>get?</span>
+  <span class='id identifier rubyid_method'>method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>GET</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="observe?-instance_method">
+  
+    #<strong>observe?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if request is an OBSERVE</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 129</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_observe?'>observe?</span>
+  <span class='id identifier rubyid_method'>method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>OBSERVE</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="option-instance_method">
+  
+    #<strong>option</strong>(option_number)  &#x21d2; <tt>Object</tt><sup>?</sup> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get CoAP option by number</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>option_number</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The CoAP option number</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Object</tt>, <tt>nil</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The option value</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 59</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_option'>option</span><span class='lparen'>(</span><span class='id identifier rubyid_option_number'>option_number</span><span class='rparen'>)</span>
+  <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='id identifier rubyid_option_number'>option_number</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="option?-instance_method">
+  
+    #<strong>option?</strong>(option_number)  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if request has a specific CoAP option</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>option_number</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The CoAP option number</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_option?'>option?</span><span class='lparen'>(</span><span class='id identifier rubyid_option_number'>option_number</span><span class='rparen'>)</span>
+  <span class='ivar'>@options</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_option_number'>option_number</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="parse_coap_uri-instance_method">
+  
+    #<strong>parse_coap_uri</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parse_coap_uri'>parse_coap_uri</span>
+  <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='ivar'>@options</span> <span class='op'>||</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='ivar'>@logger</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Options received by parse_coap_uri: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+
+  <span class='id identifier rubyid_host'>host</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/Option.html" title="Takagi::CoAP::Registries::Option (class)">Option</a></span></span><span class='op'>::</span><span class='const'>URI_HOST</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>localhost</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_path_segments'>path_segments</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/Option.html" title="Takagi::CoAP::Registries::Option (class)">Option</a></span></span><span class='op'>::</span><span class='const'>URI_PATH</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
+  <span class='id identifier rubyid_query_segments'>query_segments</span> <span class='op'>=</span> <span class='const'>Array</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/Option.html" title="Takagi::CoAP::Registries::Option (class)">Option</a></span></span><span class='op'>::</span><span class='const'>URI_QUERY</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
+
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='id identifier rubyid_path_segments'>path_segments</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_segments'>path_segments</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_query'>query</span> <span class='op'>=</span> <span class='id identifier rubyid_query_segments'>query_segments</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='kw'>nil</span> <span class='op'>:</span> <span class='id identifier rubyid_query_segments'>query_segments</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='const'>URI</span><span class='op'>::</span><span class='const'>Generic</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='label'>scheme:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>coap</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>host:</span> <span class='id identifier rubyid_host'>host</span><span class='comma'>,</span> <span class='label'>path:</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='id identifier rubyid_query'>query</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="post?-instance_method">
+  
+    #<strong>post?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if request is a POST</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_post?'>post?</span>
+  <span class='id identifier rubyid_method'>method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>POST</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="put?-instance_method">
+  
+    #<strong>put?</strong>  &#x21d2; <tt>Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Check if request is a PUT</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 117</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_put?'>put?</span>
+  <span class='id identifier rubyid_method'>method</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>PUT</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="query_params-instance_method">
+  
+    #<strong>query_params</strong>  &#x21d2; <tt>Hash&lt;String, String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get query parameters as a hash</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash&lt;String, String&gt;</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_query_params'>query_params</span>
+  <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>unless</span> <span class='ivar'>@uri</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span>
+
+  <span class='ivar'>@uri</span><span class='period'>.</span><span class='id identifier rubyid_query'>query</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_object'>each_with_object</span><span class='lparen'>(</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_param'>param</span><span class='comma'>,</span> <span class='id identifier rubyid_hash'>hash</span><span class='op'>|</span>
+    <span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>=</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>=</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='int'>2</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_hash'>hash</span><span class='lbracket'>[</span><span class='id identifier rubyid_key'>key</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_response-instance_method">
+  
+    #<strong>to_response</strong>(code, payload, options: {})  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/message/inbound.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_response'>to_response</span><span class='lparen'>(</span><span class='id identifier rubyid_code'>code</span><span class='comma'>,</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span> <span class='label'>options:</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='comment'># For TCP transport, type is not used (RFC 8323)
+</span>  <span class='id identifier rubyid_response_type'>response_type</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='ivar'>@transport</span> <span class='op'>==</span> <span class='symbol'>:tcp</span>
+                    <span class='int'>0</span>  <span class='comment'># No type field in TCP CoAP
+</span>                  <span class='kw'>else</span>
+                    <span class='kw'>case</span> <span class='ivar'>@type</span>
+                    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html" title="Takagi::CoAP::Registries::MessageType (class)">MessageType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html#CON-constant" title="Takagi::CoAP::Registries::MessageType::CON (constant)">CON</a></span></span> <span class='kw'>then</span> <span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html" title="Takagi::CoAP::Registries::MessageType (class)">MessageType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html#ACK-constant" title="Takagi::CoAP::Registries::MessageType::ACK (constant)">ACK</a></span></span>  <span class='comment'># CON → ACK
+</span>                    <span class='kw'>when</span> <span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html" title="Takagi::CoAP::Registries::MessageType (class)">MessageType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html#NON-constant" title="Takagi::CoAP::Registries::MessageType::NON (constant)">NON</a></span></span> <span class='kw'>then</span> <span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html" title="Takagi::CoAP::Registries::MessageType (class)">MessageType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html#NON-constant" title="Takagi::CoAP::Registries::MessageType::NON (constant)">NON</a></span></span>  <span class='comment'># NON → NON
+</span>                    <span class='kw'>else</span> <span class='const'><span class='object_link'><a href="../CoAP.html" title="Takagi::CoAP (module)">CoAP</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries.html" title="Takagi::CoAP::Registries (module)">Registries</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html" title="Takagi::CoAP::Registries::MessageType (class)">MessageType</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../CoAP/Registries/MessageType.html#RST-constant" title="Takagi::CoAP::Registries::MessageType::RST (constant)">RST</a></span></span> <span class='comment'># fallback → RST
+</span>                    <span class='kw'>end</span>
+                  <span class='kw'>end</span>
+
+  <span class='const'><span class='object_link'><a href="Outbound.html" title="Takagi::Message::Outbound (class)">Outbound</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Outbound.html#initialize-instance_method" title="Takagi::Message::Outbound#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+    <span class='label'>code:</span> <span class='id identifier rubyid_code'>code</span><span class='comma'>,</span>
+    <span class='label'>payload:</span> <span class='id identifier rubyid_payload'>payload</span><span class='comma'>,</span>
+    <span class='label'>token:</span> <span class='ivar'>@token</span><span class='comma'>,</span>
+    <span class='label'>message_id:</span> <span class='ivar'>@message_id</span><span class='comma'>,</span>
+    <span class='label'>type:</span> <span class='id identifier rubyid_response_type'>response_type</span><span class='comma'>,</span>
+    <span class='label'>options:</span> <span class='id identifier rubyid_options'>options</span><span class='comma'>,</span>
+    <span class='label'>transport:</span> <span class='ivar'>@transport</span>
+  <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Dec 12 09:55:56 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.38 (ruby-3.1.3).
+</div>
+
+    </div>
+  </body>
+</html>

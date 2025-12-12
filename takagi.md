@@ -25,6 +25,7 @@ lead: Lightweight Sinatra-like CoAP framework for Ruby, built for IoT APIs and m
     <h2>How to explore</h2>
     <p>Gem install or add to your Gemfile, then start with a single endpoint and expand into sensor data, device control, or microservice messaging.</p>
     <a class="button" href="https://github.com/takagi-works/takagi">View on GitHub</a>
+    <a class="button" href="/docs/takagi/index.html">Docs</a>
   </div>
 </div>
 

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Takagi::Observable::Registry
+  
+    &mdash; Documentation by YARD 0.9.38
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Takagi::Observable::Registry";
+  relpath = '../../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Takagi.html" title="Takagi (module)">Takagi</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Observable.html" title="Takagi::Observable (module)">Observable</a></span></span>
+     &raquo; 
+    <span class="title">Registry</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Takagi::Observable::Registry
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Takagi::Observable::Registry</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  <dl>
+      <dt>Extended by:</dt>
+      <dd><span class='object_link'><a href="../Registry/Base.html" title="Takagi::Registry::Base (module)">Registry::Base</a></span></dd>
+  </dl>
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/takagi/observable/registry.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Registry for reactor instances</p>
+
+<p>Manages reactor lifecycle and provides consistent API for reactor management. Uses Registry::Base for thread-safe storage and standard operations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Register reactors</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Observable.html" title="Takagi::Observable (module)">Observable</a></span></span><span class='op'>::</span><span class='const'>Registry</span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="#register-class_method" title="Takagi::Observable::Registry.register (method)">register</a></span></span><span class='lparen'>(</span><span class='symbol'>:iot</span><span class='comma'>,</span> <span class='const'>IotReactor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span>
+<span class='const'><span class='object_link'><a href="../Observable.html" title="Takagi::Observable (module)">Observable</a></span></span><span class='op'>::</span><span class='const'>Registry</span><span class='period'>.</span><span class='id identifier rubyid_register'><span class='object_link'><a href="#register-class_method" title="Takagi::Observable::Registry.register (method)">register</a></span></span><span class='lparen'>(</span><span class='symbol'>:sensors</span><span class='comma'>,</span> <span class='const'>SensorReactor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='rparen'>)</span></code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Start all reactors</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="../Observable.html" title="Takagi::Observable (module)">Observable</a></span></span><span class='op'>::</span><span class='const'>Registry</span><span class='period'>.</span><span class='id identifier rubyid_start_all'><span class='object_link'><a href="#start_all-class_method" title="Takagi::Observable::Registry.start_all (method)">start_all</a></span></span></code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Access specific reactor</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='id identifier rubyid_reactor'>reactor</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="../Observable.html" title="Takagi::Observable (module)">Observable</a></span></span><span class='op'>::</span><span class='const'>Registry</span><span class='period'>.</span><span class='id identifier rubyid_get'><span class='object_link'><a href="../Registry/Base.html#get-instance_method" title="Takagi::Registry::Base#get (method)">get</a></span></span><span class='lparen'>(</span><span class='symbol'>:iot</span><span class='rparen'>)</span>
+<span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_notify'>notify</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/temp</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='float'>25.5</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#allocate_resources-class_method" title="allocate_resources (class method)">.<strong>allocate_resources</strong>(total_threads: 10)  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Allocate thread resources across reactors.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#reactors-class_method" title="reactors (class method)">.<strong>reactors</strong>  &#x21d2; Array&lt;Reactor&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get all registered reactors.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register-class_method" title="register (class method)">.<strong>register</strong>(name, reactor, **metadata)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Register a reactor instance.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_all-class_method" title="start_all (class method)">.<strong>start_all</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Start all registered reactors.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stats-class_method" title="stats (class method)">.<strong>stats</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get statistics for all reactors.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#stop_all-class_method" title="stop_all (class method)">.<strong>stop_all</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Stop all registered reactors.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Registry/Base.html" title="Takagi::Registry::Base (module)">Registry::Base</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Registry/Base.html#[]-instance_method" title="Takagi::Registry::Base#[] (method)">[]</a></span>, <span class='object_link'><a href="../Registry/Base.html#clear!-instance_method" title="Takagi::Registry::Base#clear! (method)">clear!</a></span>, <span class='object_link'><a href="../Registry/Base.html#count-instance_method" title="Takagi::Registry::Base#count (method)">count</a></span>, <span class='object_link'><a href="../Registry/Base.html#each-instance_method" title="Takagi::Registry::Base#each (method)">each</a></span>, <span class='object_link'><a href="../Registry/Base.html#empty%3F-instance_method" title="Takagi::Registry::Base#empty? (method)">empty?</a></span>, <span class='object_link'><a href="../Registry/Base.html#entries-instance_method" title="Takagi::Registry::Base#entries (method)">entries</a></span>, <span class='object_link'><a href="../Registry/Base.html#extended-class_method" title="Takagi::Registry::Base.extended (method)">extended</a></span>, <span class='object_link'><a href="../Registry/Base.html#get-instance_method" title="Takagi::Registry::Base#get (method)">get</a></span>, <span class='object_link'><a href="../Registry/Base.html#keys-instance_method" title="Takagi::Registry::Base#keys (method)">keys</a></span>, <span class='object_link'><a href="../Registry/Base.html#metadata_for-instance_method" title="Takagi::Registry::Base#metadata_for (method)">metadata_for</a></span>, <span class='object_link'><a href="../Registry/Base.html#register-instance_method" title="Takagi::Registry::Base#register (method)">register</a></span>, <span class='object_link'><a href="../Registry/Base.html#registered%3F-instance_method" title="Takagi::Registry::Base#registered? (method)">registered?</a></span>, <span class='object_link'><a href="../Registry/Base.html#unregister-instance_method" title="Takagi::Registry::Base#unregister (method)">unregister</a></span></p>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="allocate_resources-class_method">
+  
+    .<strong>allocate_resources</strong>(total_threads: 10)  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Allocate thread resources across reactors</p>
+
+<p>Distributes available threads among registered reactors based on weights.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Takagi::Observable::Registry (class)">Registry</a></span></span><span class='period'>.</span><span class='id identifier rubyid_allocate_resources'>allocate_resources</span><span class='lparen'>(</span><span class='label'>total_threads:</span> <span class='int'>20</span><span class='rparen'>)</span>
+<span class='comment'># =&gt; { iot: 10, sensors: 6, alerts: 4 }</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>total_threads</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>10</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Total threads to allocate</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Map of reactor name =&gt; allocated threads</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/observable/registry.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_allocate_resources'>allocate_resources</span><span class='lparen'>(</span><span class='label'>total_threads:</span> <span class='int'>10</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_reactor_list'>reactor_list</span> <span class='op'>=</span> <span class='id identifier rubyid_reactors'>reactors</span>
+  <span class='kw'>return</span> <span class='lbrace'>{</span><span class='rbrace'>}</span> <span class='kw'>if</span> <span class='id identifier rubyid_reactor_list'>reactor_list</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+
+  <span class='id identifier rubyid_threads_per_reactor'>threads_per_reactor</span> <span class='op'>=</span> <span class='id identifier rubyid_total_threads'>total_threads</span> <span class='op'>/</span> <span class='id identifier rubyid_reactor_list'>reactor_list</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span>
+  <span class='id identifier rubyid_threads_per_reactor'>threads_per_reactor</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_threads_per_reactor'>threads_per_reactor</span><span class='comma'>,</span> <span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span>
+
+  <span class='id identifier rubyid_allocations'>allocations</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_reactor_list'>reactor_list</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_reactor'>reactor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='id identifier rubyid_keys'>keys</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_k'>k</span><span class='op'>|</span> <span class='kw'>self</span><span class='lbracket'>[</span><span class='id identifier rubyid_k'>k</span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='id identifier rubyid_reactor'>reactor</span> <span class='rbrace'>}</span>
+    <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_thread_pool'>thread_pool</span><span class='period'>.</span><span class='id identifier rubyid_resize'>resize</span><span class='lparen'>(</span><span class='id identifier rubyid_threads_per_reactor'>threads_per_reactor</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_thread_pool'>thread_pool</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:resize</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_allocations'>allocations</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_threads_per_reactor'>threads_per_reactor</span>
+  <span class='kw'>end</span>
+
+  <span class='const'><span class='object_link'><a href="../../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logger'><span class='object_link'><a href="../../Takagi.html#logger-class_method" title="Takagi.logger (method)">logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Allocated </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_threads_per_reactor'>threads_per_reactor</span><span class='embexpr_end'>}</span><span class='tstring_content'> threads per reactor</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_allocations'>allocations</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reactors-class_method">
+  
+    .<strong>reactors</strong>  &#x21d2; <tt>Array&lt;<span class='object_link'><a href="Reactor.html" title="Takagi::Observable::Reactor (class)">Reactor</a></span>&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get all registered reactors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="Reactor.html" title="Takagi::Observable::Reactor (class)">Reactor</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of reactor instances</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/observable/registry.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reactors'>reactors</span>
+  <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_registry'>registry</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register-class_method">
+  
+    .<strong>register</strong>(name, reactor, **metadata)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Register a reactor instance</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'><span class='object_link'><a href="" title="Takagi::Observable::Registry (class)">Registry</a></span></span><span class='period'>.</span><span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='symbol'>:sensors</span><span class='comma'>,</span> <span class='const'>SensorReactor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='label'>description:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>IoT sensors</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>name</span>
+      
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Unique identifier for the reactor</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>reactor</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Reactor.html" title="Takagi::Observable::Reactor (class)">Reactor</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Reactor instance</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>metadata</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Optional metadata</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/observable/registry.rb', line 33</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register'>register</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='comma'>,</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_all-class_method">
+  
+    .<strong>start_all</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Start all registered reactors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+47
+48
+49
+50
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/observable/registry.rb', line 47</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_all'>start_all</span>
+  <span class='id identifier rubyid_reactor_list'>reactor_list</span> <span class='op'>=</span> <span class='id identifier rubyid_reactors'>reactors</span>
+  <span class='id identifier rubyid_reactor_list'>reactor_list</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_reactor'>reactor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span> <span class='kw'>unless</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span>
+  <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="../../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logger'><span class='object_link'><a href="../../Takagi.html#logger-class_method" title="Takagi.logger (method)">logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Started </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reactor_list'>reactor_list</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> reactor(s)</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stats-class_method">
+  
+    .<strong>stats</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get statistics for all reactors</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Map of reactor name =&gt; stats</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/observable/registry.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stats'>stats</span>
+  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='lbrace'>{</span>
+      <span class='label'>running:</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span><span class='comma'>,</span>
+      <span class='label'>observables:</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_observables'>observables</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='comma'>,</span>
+      <span class='label'>observers:</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_observers'>observers</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='comma'>,</span>
+      <span class='label'>threads:</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:threads</span><span class='rbracket'>]</span><span class='comma'>,</span>
+      <span class='label'>thread_pool_stats:</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_thread_pool'>thread_pool</span><span class='period'>.</span><span class='id identifier rubyid_current_stats'>current_stats</span>
+    <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="stop_all-class_method">
+  
+    .<strong>stop_all</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Stop all registered reactors</p>
+
+<p>Safe to call from signal traps (doesn’t use mutex directly)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/observable/registry.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_stop_all'>stop_all</span>
+  <span class='comment'># Get reactors list without holding mutex (avoid trap context issues)
+</span>  <span class='id identifier rubyid_reactor_list'>reactor_list</span> <span class='op'>=</span> <span class='kw'>begin</span>
+                   <span class='ivar'>@mutex</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='lbrace'>{</span> <span class='id identifier rubyid_registry'>registry</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span> <span class='rbrace'>}</span>
+                 <span class='kw'>rescue</span> <span class='const'>ThreadError</span>
+                   <span class='comment'># If called from trap context, access without lock
+</span>                   <span class='id identifier rubyid_registry'>registry</span><span class='period'>.</span><span class='id identifier rubyid_values'>values</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+                 <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_reactor_list'>reactor_list</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_reactor'>reactor</span><span class='op'>|</span>
+    <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_stop'>stop</span> <span class='kw'>if</span> <span class='id identifier rubyid_reactor'>reactor</span><span class='period'>.</span><span class='id identifier rubyid_running?'>running?</span>
+  <span class='kw'>end</span>
+  <span class='const'><span class='object_link'><a href="../../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logger'><span class='object_link'><a href="../../Takagi.html#logger-class_method" title="Takagi.logger (method)">logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Stopped </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_reactor_list'>reactor_list</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='embexpr_end'>}</span><span class='tstring_content'> reactor(s)</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Dec 12 09:55:57 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.38 (ruby-3.1.3).
+</div>
+
+    </div>
+  </body>
+</html>

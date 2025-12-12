@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Takagi::Application
+  
+    &mdash; Documentation by YARD 0.9.38
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Takagi::Application";
+  relpath = '../';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="../class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="../_index.html">Index (A)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Takagi.html" title="Takagi (module)">Takagi</a></span></span>
+     &raquo; 
+    <span class="title">Application</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Takagi::Application
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Takagi::Application</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/takagi/application.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Application class for modular controller-based apps</p>
+
+<p>Application provides a centralized way to mount and manage multiple controllers, auto-load controller files, and run the server.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>Simple application</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>MyApp</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='op'>::</span><span class='const'>Application</span>
+  <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_load_controllers'>load_controllers</span> <span class='const'>TelemetryController</span><span class='comma'>,</span> <span class='const'>ConfigController</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>MyApp</span><span class='period'>.</span><span class='id identifier rubyid_run!'>run!</span><span class='lparen'>(</span><span class='label'>port:</span> <span class='int'>5683</span><span class='rparen'>)</span></code></pre>
+    
+      
+        <h5 class="example_title"><div class='inline'>
+<p>With auto-loading</p>
+</div></h5>
+      
+      <pre class="example code"><code><span class='kw'>class</span> <span class='const'>MyApp</span> <span class='op'>&lt;</span> <span class='const'><span class='object_link'><a href="../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='op'>::</span><span class='const'>Application</span>
+  <span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_auto_load'>auto_load</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>app/controllers/**/*_controller.rb</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span>
+
+<span class='const'>MyApp</span><span class='period'>.</span><span class='id identifier rubyid_run!'>run!</span></code></pre>
+    
+  </div>
+
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Application/ConfigContext.html" title="Takagi::Application::ConfigContext (class)">ConfigContext</a></span>, <span class='object_link'><a href="Application/DiscoveryController.html" title="Takagi::Application::DiscoveryController (class)">DiscoveryController</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#config-class_method" title="config (class method)">.<strong>config</strong>  &#x21d2; Hash </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get the application’s configuration.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configure-class_method" title="configure (class method)">.<strong>configure</strong> { ... } &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Configure the application.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#controllers-class_method" title="controllers (class method)">.<strong>controllers</strong>  &#x21d2; Array&lt;Class&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get all loaded controller classes.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_controllers!-class_method" title="load_controllers! (class method)">.<strong>load_controllers!</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Load and mount all registered controllers.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#router-class_method" title="router (class method)">.<strong>router</strong>  &#x21d2; CompositeRouter </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Get the application’s composite router.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#run!-class_method" title="run! (class method)">.<strong>run!</strong>(**options)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Run the application server.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shutdown_all_workers!-class_method" title="shutdown_all_workers! (class method)">.<strong>shutdown_all_workers!</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Shutdown all controller worker thread pools.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#start_all_workers!-class_method" title="start_all_workers! (class method)">.<strong>start_all_workers!</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Start worker thread pools for all controllers.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="config-class_method">
+  
+    .<strong>config</strong>  &#x21d2; <tt>Hash</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the application’s configuration</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Configuration hash</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+73
+74
+75
+76
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 73</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_config'>config</span>
+  <span class='ivar'>@config</span> <span class='op'>||=</span> <span class='lbrace'>{</span>
+    <span class='label'>controllers:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>auto_load_patterns:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='label'>allocation_mode:</span> <span class='symbol'>:automatic</span><span class='comma'>,</span>  <span class='comment'># :manual or :automatic
+</span>    <span class='label'>total_threads:</span> <span class='kw'>nil</span>             <span class='comment'># For automatic mode
+</span>  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="configure-class_method">
+  
+    .<strong>configure</strong> { ... } &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Configure the application</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_configure'>configure</span> <span class='kw'>do</span>
+  <span class='id identifier rubyid_load_controllers'>load_controllers</span> <span class='const'>TelemetryController</span><span class='comma'>,</span> <span class='const'>ConfigController</span>
+  <span class='id identifier rubyid_auto_load'>auto_load</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>app/controllers/**/*_controller.rb</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span></code></pre>
+    
+  </div>
+
+<p class="tag_title">Yields:</p>
+<ul class="yield">
+  
+    <li>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        
+        <div class='inline'>
+<p>Block for configuration DSL</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='const'><span class='object_link'><a href="Application/ConfigContext.html" title="Takagi::Application::ConfigContext (class)">ConfigContext</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Application/ConfigContext.html#initialize-instance_method" title="Takagi::Application::ConfigContext#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_block'>block</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="controllers-class_method">
+  
+    .<strong>controllers</strong>  &#x21d2; <tt>Array&lt;Class&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get all loaded controller classes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;Class&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of controller classes</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 188</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_controllers'>controllers</span>
+  <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:controllers</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_controllers!-class_method">
+  
+    .<strong>load_controllers!</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Load and mount all registered controllers</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_controllers!'>load_controllers!</span>
+  <span class='comment'># Load auto-discovered controllers
+</span>  <span class='id identifier rubyid_auto_load_controllers!'>auto_load_controllers!</span> <span class='kw'>if</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:auto_load_patterns</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+
+  <span class='comment'># Mount discovery controller first (so it&#39;s available at /.well-known/core)
+</span>  <span class='comment'># Store reference to composite router for discovery endpoint
+</span>  <span class='const'><span class='object_link'><a href="Application/DiscoveryController.html" title="Takagi::Application::DiscoveryController (class)">DiscoveryController</a></span></span><span class='period'>.</span><span class='id identifier rubyid_app_router'><span class='object_link'><a href="Application/DiscoveryController.html#app_router-class_method" title="Takagi::Application::DiscoveryController.app_router (method)">app_router</a></span></span> <span class='op'>=</span> <span class='id identifier rubyid_router'>router</span>
+  <span class='id identifier rubyid_router'>router</span><span class='period'>.</span><span class='id identifier rubyid_mount'>mount</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="Application/DiscoveryController.html" title="Takagi::Application::DiscoveryController (class)">DiscoveryController</a></span></span><span class='rparen'>)</span>
+
+  <span class='comment'># Mount all registered controllers
+</span>  <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:controllers</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_controller_class'>controller_class</span><span class='op'>|</span>
+    <span class='id identifier rubyid_router'>router</span><span class='period'>.</span><span class='id identifier rubyid_mount'>mount</span><span class='lparen'>(</span><span class='id identifier rubyid_controller_class'>controller_class</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="router-class_method">
+  
+    .<strong>router</strong>  &#x21d2; <tt><span class='object_link'><a href="CompositeRouter.html" title="Takagi::CompositeRouter (class)">CompositeRouter</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Get the application’s composite router</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="CompositeRouter.html" title="Takagi::CompositeRouter (class)">CompositeRouter</a></span></tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The application’s router</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_router'>router</span>
+  <span class='ivar'>@router</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="CompositeRouter.html" title="Takagi::CompositeRouter (class)">CompositeRouter</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="CompositeRouter.html#initialize-instance_method" title="Takagi::CompositeRouter#initialize (method)">new</a></span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="run!-class_method">
+  
+    .<strong>run!</strong>(**options)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Run the application server</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h4 class="tag_title">Examples:</h4>
+    
+      
+      <pre class="example code"><code><span class='const'>MyApp</span><span class='period'>.</span><span class='id identifier rubyid_run!'>run!</span><span class='lparen'>(</span><span class='label'>port:</span> <span class='int'>5683</span><span class='comma'>,</span> <span class='label'>protocols:</span> <span class='lbracket'>[</span><span class='symbol'>:udp</span><span class='comma'>,</span> <span class='symbol'>:tcp</span><span class='rbracket'>]</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>options</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Server options (port, protocols, etc.)</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 171</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_run!'>run!</span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+  <span class='comment'># Load all controllers
+</span>  <span class='id identifier rubyid_load_controllers!'>load_controllers!</span>
+
+  <span class='comment'># Start controller worker pools
+</span>  <span class='id identifier rubyid_start_all_workers!'>start_all_workers!</span>
+
+  <span class='comment'># Use the composite router instead of global singleton
+</span>  <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:router</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_router'>router</span>
+
+  <span class='comment'># Delegate to server lifecycle (same as Takagi::Base)
+</span>  <span class='const'><span class='object_link'><a href="Base.html" title="Takagi::Base (class)">Base</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Base/ServerLifecycle.html" title="Takagi::Base::ServerLifecycle (module)">ServerLifecycle</a></span></span><span class='period'>.</span><span class='id identifier rubyid_run!'><span class='object_link'><a href="Base/ServerLifecycle.html#run!-instance_method" title="Takagi::Base::ServerLifecycle#run! (method)">run!</a></span></span><span class='lparen'>(</span><span class='op'>**</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="shutdown_all_workers!-class_method">
+  
+    .<strong>shutdown_all_workers!</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Shutdown all controller worker thread pools</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158
+159
+160
+161
+162</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_shutdown_all_workers!'>shutdown_all_workers!</span>
+  <span class='id identifier rubyid_all_controllers'>all_controllers</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:controllers</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Application/DiscoveryController.html" title="Takagi::Application::DiscoveryController (class)">DiscoveryController</a></span></span><span class='rbracket'>]</span>
+
+  <span class='id identifier rubyid_all_controllers'>all_controllers</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_controller_class'>controller_class</span><span class='op'>|</span>
+    <span class='id identifier rubyid_controller_class'>controller_class</span><span class='period'>.</span><span class='id identifier rubyid_shutdown_workers!'>shutdown_workers!</span> <span class='kw'>if</span> <span class='id identifier rubyid_controller_class'>controller_class</span><span class='period'>.</span><span class='id identifier rubyid_workers_running?'>workers_running?</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="start_all_workers!-class_method">
+  
+    .<strong>start_all_workers!</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Start worker thread pools for all controllers</p>
+
+<p>Allocates thread pool resources based on allocation_mode:</p>
+<ul><li>
+<p>:manual - Controllers use their explicit thread_count or profile settings</p>
+</li><li>
+<p>:automatic - Divides total_threads proportionally by profile weights</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/takagi/application.rb', line 120</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_start_all_workers!'>start_all_workers!</span>
+  <span class='comment'># Use app config first, fall back to global config
+</span>  <span class='id identifier rubyid_mode'>mode</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:allocation_mode</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_config'><span class='object_link'><a href="../Takagi.html#config-class_method" title="Takagi.config (method)">config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_allocation'>allocation</span><span class='period'>.</span><span class='id identifier rubyid_mode'>mode</span>
+  <span class='id identifier rubyid_total_threads'>total_threads</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:total_threads</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'><span class='object_link'><a href="../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_config'><span class='object_link'><a href="../Takagi.html#config-class_method" title="Takagi.config (method)">config</a></span></span><span class='period'>.</span><span class='id identifier rubyid_allocation'>allocation</span><span class='period'>.</span><span class='id identifier rubyid_total_threads'>total_threads</span>
+  <span class='id identifier rubyid_controllers_to_allocate'>controllers_to_allocate</span> <span class='op'>=</span> <span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='symbol'>:controllers</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='lbracket'>[</span><span class='const'><span class='object_link'><a href="Application/DiscoveryController.html" title="Takagi::Application::DiscoveryController (class)">DiscoveryController</a></span></span><span class='rbracket'>]</span>
+
+  <span class='comment'># Calculate allocations based on mode
+</span>  <span class='id identifier rubyid_allocations'>allocations</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Controller.html" title="Takagi::Controller (class)">Controller</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Controller/ResourceAllocator.html" title="Takagi::Controller::ResourceAllocator (class)">ResourceAllocator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_allocate'><span class='object_link'><a href="Controller/ResourceAllocator.html#allocate-class_method" title="Takagi::Controller::ResourceAllocator.allocate (method)">allocate</a></span></span><span class='lparen'>(</span>
+    <span class='label'>controllers:</span> <span class='id identifier rubyid_controllers_to_allocate'>controllers_to_allocate</span><span class='comma'>,</span>
+    <span class='label'>mode:</span> <span class='id identifier rubyid_mode'>mode</span><span class='comma'>,</span>
+    <span class='label'>total_threads:</span> <span class='id identifier rubyid_total_threads'>total_threads</span><span class='comma'>,</span>
+    <span class='label'>protocol:</span> <span class='symbol'>:tcp</span>  <span class='comment'># TCP uses threads, UDP uses processes
+</span>  <span class='rparen'>)</span>
+
+  <span class='comment'># Validate allocations if automatic mode with total_threads specified
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_mode'>mode</span> <span class='op'>==</span> <span class='symbol'>:automatic</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_total_threads'>total_threads</span>
+    <span class='const'><span class='object_link'><a href="Controller.html" title="Takagi::Controller (class)">Controller</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Controller/ResourceAllocator.html" title="Takagi::Controller::ResourceAllocator (class)">ResourceAllocator</a></span></span><span class='period'>.</span><span class='id identifier rubyid_validate!'><span class='object_link'><a href="Controller/ResourceAllocator.html#validate!-class_method" title="Takagi::Controller::ResourceAllocator.validate! (method)">validate!</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_allocations'>allocations</span><span class='comma'>,</span> <span class='label'>total_threads:</span> <span class='id identifier rubyid_total_threads'>total_threads</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+
+  <span class='comment'># Start each controller&#39;s thread pool
+</span>  <span class='id identifier rubyid_allocations'>allocations</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_controller_class'>controller_class</span><span class='comma'>,</span> <span class='id identifier rubyid_allocation'>allocation</span><span class='op'>|</span>
+    <span class='id identifier rubyid_threads'>threads</span> <span class='op'>=</span> <span class='id identifier rubyid_allocation'>allocation</span><span class='lbracket'>[</span><span class='symbol'>:threads</span><span class='rbracket'>]</span>
+    <span class='kw'>next</span> <span class='kw'>unless</span> <span class='id identifier rubyid_threads'>threads</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_threads'>threads</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+
+    <span class='id identifier rubyid_controller_class'>controller_class</span><span class='period'>.</span><span class='id identifier rubyid_start_workers!'>start_workers!</span><span class='lparen'>(</span>
+      <span class='label'>threads:</span> <span class='id identifier rubyid_threads'>threads</span><span class='comma'>,</span>
+      <span class='label'>name:</span> <span class='id identifier rubyid_controller_class'>controller_class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>::</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+    <span class='rparen'>)</span>
+
+    <span class='const'><span class='object_link'><a href="../Takagi.html" title="Takagi (module)">Takagi</a></span></span><span class='period'>.</span><span class='id identifier rubyid_logger'><span class='object_link'><a href="../Takagi.html#logger-class_method" title="Takagi.logger (method)">logger</a></span></span><span class='period'>.</span><span class='id identifier rubyid_info'>info</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Allocated </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_threads'>threads</span><span class='embexpr_end'>}</span><span class='tstring_content'> threads to </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_controller_class'>controller_class</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='embexpr_end'>}</span><span class='tstring_content'> (mode: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_mode'>mode</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Dec 12 09:55:56 2025 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.38 (ruby-3.1.3).
+</div>
+
+    </div>
+  </body>
+</html>
