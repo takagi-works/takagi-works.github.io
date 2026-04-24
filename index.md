@@ -6,7 +6,7 @@ permalink: /
 <section class="hero">
   <div class="hero-content">
     <p class="eyebrow">Developer tools without bloat</p>
-    <h1>Takagi Works</h1>
+    <h1>[波と箱] Takagi Works</h1>
     <p class="lead">Takagi Works builds Ruby tooling for hardware, edge computing, and real IoT systems.</p>
     <div class="list-inline">
       <a class="button" href="/takagi.html">View Takagi</a>
